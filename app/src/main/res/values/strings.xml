@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">EJournalist</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_event">EventActivity</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="save_user">Save User</string>
+    <string name="Events">Events</string>
+    <string name="exit">Exit</string>
+    <string name="add_event">Add Event</string>
+    <string name="enter_note">Enter Note</string>
+    <string name="save_note">Save Note</string>
+    <string name="title_activity_notes">notes</string>
+    <string name="title_activity_event__interface">Event_Interface</string>
+    <string name="my_events">My Events</string>
+</resources>
