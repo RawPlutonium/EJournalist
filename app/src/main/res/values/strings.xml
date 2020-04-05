@@ -13,7 +13,7 @@
     <string name="last_name">Last Name</string>
     <string name="email">Email</string>
     <string name="save_user">Save User</string>
-    <string name="Events">Events</string>
+    <string name="Events">New Event</string>
     <string name="exit">Exit</string>
     <string name="add_event">Add Event</string>
     <string name="enter_note">Enter Note</string>
