@@ -8,17 +8,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <Button
-        android:id="@+id/newEventBtn"
+        android:id="@+id/editEvent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
-        android:text="@string/add_new_event" />
+        android:text="@string/edit_event" />
 
     <Button
-        android:id="@+id/goToEventsBtn"
+        android:id="@+id/goToNotesBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/my_events"
+        android:text="@string/my_notes"
         />
 
 </LinearLayout>

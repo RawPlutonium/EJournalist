@@ -4,9 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.room.Room;
@@ -53,7 +50,7 @@ public class EditNote extends AppCompatActivity {
                         db.notesDao().editNote(editNote.getText().toString(), timeStamp, note_id);
                         Toast toast = Toast.makeText(getApplicationContext(), "Edit Saved",Toast.LENGTH_SHORT);
                         toast.show();
-                        Intent intent = new Intent(EditNote.this, notes.class);
+                        Intent intent = new Intent(EditNote.this, NotesActivity.class);
                         intent.putExtra("EVENT_ID", event_id);
                         startActivity(intent);
                     }
@@ -64,7 +61,7 @@ public class EditNote extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         db.notesDao().deleteNote(note_id);
-                        Intent intent = new Intent(EditNote.this, notes.class);
+                        Intent intent = new Intent(EditNote.this, NotesActivity.class);
                         intent.putExtra("EVENT_ID",event_id);
                         startActivity(intent);
                     }

@@ -4,29 +4,23 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
-import androidx.room.RoomDatabase;
 
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-public class notes extends AppCompatActivity {
+public class NotesActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     notesAdapter adapter;
     EditText note;
@@ -54,8 +48,6 @@ public class notes extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast toast = Toast.makeText(getApplicationContext(),"I have "+note.getText().toString(),Toast.LENGTH_SHORT);
-                        toast.show();
                         db.notesDao().insert(new Notes(note.getText().toString(), timeStamp, event_id));
                         finish();
                         startActivity(getIntent());
@@ -70,7 +62,7 @@ public class notes extends AppCompatActivity {
                 new notesAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(Notes notes) {
-                        Intent intent = new Intent(notes.this, EditNote.class);
+                        Intent intent = new Intent(NotesActivity.this, EditNote.class);
                         intent.putExtra("NOTE_ID", notes.getId());
                         intent.putExtra("EVENT_ID", event_id);
                         startActivity(intent);

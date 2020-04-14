@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:padding="24dp"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingTop="100dp"
     android:layout_height="wrap_content">
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addEventHolder"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/event_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Event Name"/>
+            android:hint="@string/event_name"/>
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <Button
         android:id="@+id/saveEvent"
+        android:layout_marginLeft="100dp"
+        android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_event"/>
+        android:text="@string/add_event"
+        android:layout_marginStart="100dp" />
 </LinearLayout>

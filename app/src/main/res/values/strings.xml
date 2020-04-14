@@ -13,7 +13,7 @@
     <string name="last_name">Last Name</string>
     <string name="email">Email</string>
     <string name="save_user">Save User</string>
-    <string name="Events">New Event</string>
+    <string name="Events">Events</string>
     <string name="exit">Exit</string>
     <string name="add_event">Add Event</string>
     <string name="enter_note">Enter Note</string>
@@ -25,4 +25,13 @@
     <string name="title_activity_edit_note">EditNote</string>
     <string name="save_edited_note">Save edited note</string>
     <string name="delete_note">Delete Note</string>
+    <string name="title_activity_edit_event">EditEvent</string>
+    <string name="delete_event">Delete Event</string>
+    <string name="event_name">Event Name</string>
+    <string name="edit_event_name">Edit Event Name</string>
+    <string name="add_new_event">Add New Event</string>
+    <string name="title_activity_pre_event">PreEvent</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="my_notes">My Notes</string>
+    <string name="save_edit">Save Edit</string>
 </resources>

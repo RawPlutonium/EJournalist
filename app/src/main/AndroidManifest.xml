@@ -10,15 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".PreEvent"
+            android:label="@string/title_activity_pre_event"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".EditEvent"
+            android:label="@string/title_activity_edit_event"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".EditNote"
             android:label="@string/title_activity_edit_note"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Event_Interface"
             android:label="@string/title_activity_event__interface"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".notes"
+            android:name=".NotesActivity"
             android:label="@string/title_activity_notes"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Add_Event" />
