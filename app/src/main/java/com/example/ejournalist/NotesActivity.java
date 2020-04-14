@@ -19,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class NotesActivity extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -31,18 +32,18 @@ public class NotesActivity extends AppCompatActivity {
         final int event_id = intent.getIntExtra("EVENT_ID", 0);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         note = findViewById(R.id.note);
         saveNote = findViewById(R.id.saveNoteButton);
         recyclerView = findViewById(R.id.recyclerViewNotes);
-        final AppDatabase db = Room.databaseBuilder(getApplicationContext(),
-                AppDatabase.class,"production")
+        final AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "production")
                 .allowMainThreadQueries()
                 .build();
         Date c = Calendar.getInstance().getTime();
         System.out.println("Current time => " + c);
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd HH:mm");
+        SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd HH:mm", Locale.ENGLISH);
         final String timeStamp = df.format(c);
         saveNote.setOnClickListener(
                 new View.OnClickListener() {
