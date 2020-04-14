@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Add_Event extends AppCompatActivity {
+    public static final String EXTRA_NAME = "com.example.ejournalist.EXTRA_NAME";
+
     EditText event_name;
     Button addEvent;
     @Override

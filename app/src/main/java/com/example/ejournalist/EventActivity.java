@@ -1,5 +1,6 @@
 package com.example.ejournalist;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -36,9 +37,10 @@ public class EventActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(new EventAdapter.OnItemClickListener() {
             @Override
-            public void onItemClick(int position) {
-                events.get(position);
-                Toast.makeText(getApplicationContext(), "Clicked", Toast.LENGTH_SHORT);
+            public void onItemClick(Event event) {
+                Intent intent = new Intent(EventActivity.this, notes.class);
+                intent.putExtra("EVENT_ID", event.getId());
+                startActivity(intent);
             }
         });
     }

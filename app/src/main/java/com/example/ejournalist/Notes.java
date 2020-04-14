@@ -1,31 +1,46 @@
 package com.example.ejournalist;
 
-import androidx.room.ColumnInfo;
+
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.sql.Timestamp;
 
 @Entity
 public class Notes {
-    public Notes(String text) {
-        this.text = text;
-    }
     @PrimaryKey(autoGenerate = true)
-    private int id;
-
-    @ColumnInfo(name="text")
+    private long id;
     private String text;
-
-
-    @ColumnInfo(name = "creation_date")
-    private String creationDate;
-
-    @ColumnInfo(name="event_id")
+    private String creation_date;
     private int event_id;
 
-    public int getId() {
+    Notes(String text, String creation_date, int event_id) {
+        this.text = text;
+        this.creation_date = creation_date;
+        this.event_id = event_id;
+    }
+
+    public long getId() {
         return id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getCreation_date() {
+        return creation_date;
+    }
+
+    public void setCreation_date(String creation_date) {
+        this.creation_date = creation_date;
     }
 
     public int getEvent_id() {
@@ -36,24 +51,12 @@ public class Notes {
         this.event_id = event_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    String getCreationDate() {
+        return creation_date;
     }
 
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public String getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(String creationDate) {
-        this.creationDate = creationDate;
+    public int getEventId() {
+        return event_id;
     }
 }
 

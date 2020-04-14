@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/create_note"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingTop="50dp"
+    android:layout_below="@+id/recyclerViewNotes"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editNoteHolder"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_note"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/saveNoteButton"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@+id/editNoteHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_edited_note"
+        android:layout_marginStart="40dp" />
+    <Button
+        android:id="@+id/deleteNoteButton"
+        android:layout_toRightOf="@id/saveNoteButton"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/editNoteHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_note"
+        android:layout_toEndOf="@id/saveNoteButton"
+        android:layout_marginStart="20dp" />
+</RelativeLayout>
